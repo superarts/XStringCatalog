@@ -15,14 +15,16 @@ If you are not familiar with [Apple's String Catalog](https://developer.apple.co
     - [Advantage against the old `Localizable String` approach](#advantage-against-the-old-localizable-string-approach)
     - [Why Apple's approach is bad](#why-apples-approach-is-bad)
   - [General thinking about Apple's tech stack](#general-thinking-about-apples-tech-stack)
+- [Credit](#credit)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Workflow
 
 - Add a `String Catalog` to your project.
-- If you are dealing with an old base and needs to provide localization right now, add copies in the String Catalog. Otherwise leave them along. We'll revisit it later.
-- Whenever you want to add a new string to the project, always manually create an entry in `Localizable.xcstrings`.
+- Build your app to compile your `String Catalog` from your current codebase.
+- If you are dealing with an old codebase and needs to provide localization right now, add copies in the String Catalog. Otherwise leave them along. We'll revisit it later.
+- Whenever you want to add a new string to the project, always manually create an entry in `Localizable.xcstrings` and add localized string(s).
   - Use a variable name friendly string as `Key`.
   - TODO: plural forms etc. is to be added later.
 - Create `enum` in your code that contains all the String Catalog keys.
