@@ -24,9 +24,19 @@ If you are not familiar with [Apple's String Catalog](https://developer.apple.co
 - If you are dealing with an old base and needs to provide localization right now, add copies in the String Catalog. Otherwise leave them along. We'll revisit it later.
 - Whenever you want to add a new string to the project, always manually create an entry in `Localizable.xcstrings`.
   - Use a variable name friendly string as `Key`.
-  - TODO: plural forms etc. is out of the scope for now.
+  - TODO: plural forms etc. is to be added later.
 - Create `enum` in your code that contains all the String Catalog keys.
+  - It can be constructed manually, all you need is to use a `LocalizedStringKey` in `SwiftUI.View`, not the String itself.
+    - Helper function: `var key: LocalizedStringKey { LocalizedStringKey(rawValue) }`
+  - OR use the [SringCatalogEnum](./StringCatalogEnum) CLI tool in this repo.
+    - Copy `xcstrings-enum-generate` to your project.
+    - Added something like `xcstrings-enum-generate --xcstrings-path ../Resources/Localizable.xcstrings --output-filename ../Generated/XcodeString.swift` to generate the `enum`.
+  - OR use [SwiftGen](https://github.com/SwiftGen/SwiftGen/issues/1065) - hopefully better support will be added in future.
+  - OR explore how to achieve it with [Sourcery](https://github.com/krzysztofzablocki/Sourcery).
 - Use `LocalizedStringKey(key)` in your SwiftUI components.
+  - With `StringCatalogEnum`: `Text(XCS.welcomeBack.key)`
+- At this point, you end up with a native `enum`, hopefully generated from your `String Catalog`.
+  - With `StringCatalogEnum`: remove hard-coded strings from your `SwiftUI` components and create manual keys and localized strings.
 
 ## Appendix
 
@@ -69,3 +79,7 @@ I think this is because Apple, at its core, is a company that sells products. It
 Companies like Google, on the other hand, are built around technology. They don't hesitate to kill their services and update their tech stack, which sometimes results confusion and frustration. But they do offer more software architectural level of thinking, which can be insightful for developers in their ecosystems.
 
 Of course, this is just a high level summary. Apple built async/wait APIs to promote better codes, and Google still uses XML (bah) for string resources. And just like iOS and Android, we are seeing both parties learn from each other. Hopefully technology will keep evolving.
+
+## Credit
+
+- CLI tool built from [SwiftCLITemplate](https://github.com/superarts/SwiftCLITemplate).

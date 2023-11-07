@@ -3,8 +3,9 @@ NAME=xcstrings-enum-generate
 all: debug
 	./$(NAME) \
 		--xcstrings-path ~/prj/ios/quible/Quible/Resources/Localizable.xcstrings \
-		--enum-name XcodeStrings \
-		--enum-type-alias X
+		--enum-name XcodeString \
+		--enum-typealias X \
+		--output-filename ~/prj/ios/quible/Quible/Const/Generated/XcodeString.swift
 
 debug:
 	swift build
