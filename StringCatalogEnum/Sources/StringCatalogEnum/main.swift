@@ -60,7 +60,7 @@ struct StringCatalogEnum: ParsableCommand {
         var cases = [String]()
         var knownCases = [String]()
         for (key, _) in strings {
-            guard let name = convertToVariableName(key) else {
+            guard let name = convertToVariableName(key: key) else {
                 print("SKIPPING: \(key)")
                 continue
             }
@@ -94,7 +94,7 @@ struct StringCatalogEnum: ParsableCommand {
             """
         cases.removeAll()
         for (key, _) in strings {
-            guard let name = convertToVariableName(key) else {
+            guard let name = convertToVariableName(key: key) else {
                 print("SKIPPING: \(key)")
                 continue
             }
@@ -138,13 +138,12 @@ struct StringCatalogEnum: ParsableCommand {
         print("Written to: \(outputFilename)")
     }
 
-    // TODO: add to some StringUtility
-    private func convertToVariableName(_ str: String) -> String? {
-        // str.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
-        var result = str.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
-        // let result = String(str.unicodeScalars.filter(CharacterSet.letters.contains || CharacterSet.alphanumerics.contains))
-        // return str.removeNonLetters()
+    /// Convert a Strint Catalog key to a Swift variable name.
+    private func convertToVariableName(key: String) -> String? {
+        // Leave only letters and numeric characters
+        var result = key.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
 
+        // Remove leading numeric characters
         while !result.isEmpty {
             let firstLetter = result.prefix(1)
             let digitsCharacters = CharacterSet(charactersIn: "0123456789")
@@ -161,11 +160,12 @@ struct StringCatalogEnum: ParsableCommand {
             return nil
         }
 
-        // Only 1 character
+        // Return lowercased string if there's only 1 character
         guard result.count > 1 else {
             return result.lowercased()
         }
 
+        // Change the first character to lowercase
         let firstLetter = result.prefix(1).lowercased()
         let remainingLetters = result.dropFirst()
         result = firstLetter + remainingLetters
