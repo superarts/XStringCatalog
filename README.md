@@ -2,7 +2,7 @@
 
 A framework that generates `enum` from `xcstrings` - Swift enumerations from String Catalog for iOS / iPadOS / macOS / tvOS.
 
-If you are not familiar with [Apple's String Catalog](https://developer.apple.com/documentation/Xcode/localizing-and-varying-text-with-a-string-catalog) (introduced from Xcode 15 - WWDC 23), please check TODO.
+If you are not familiar with [Apple's String Catalog](https://developer.apple.com/documentation/Xcode/localizing-and-varying-text-with-a-string-catalog) (introduced from Xcode 15 - WWDC 23), please check [Apple's workflow](#apples-workflow-and-why-its-bad) first.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -48,7 +48,7 @@ This section provides context and high order thinking, which can be ignored by s
 
 #### Workflow
 
-As mentioned in TODO, Apple's bare minimum localization implementation is to reuse the mechanisms based on Localizable Strings, and makes it easier to use. Typical workflow is like:
+Apple's bare minimum localization implementation is to reuse the mechanisms based on Localizable Strings, and makes it easier to use. Typical workflow is like:
 
 - Write codes like `SwiftUI.Text("Product Title")`.
 - Add a `String Catalog` to enable localization.
