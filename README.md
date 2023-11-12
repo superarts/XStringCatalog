@@ -1,4 +1,4 @@
-# XStringCatelog
+# XStringCatalog
 
 A framework that generates `enum` from `xcstrings` - Swift enumerations from String Catalog for iOS / iPadOS / macOS / tvOS.
 
