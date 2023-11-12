@@ -6,12 +6,12 @@ import PackageDescription
 // TODO: clean up this local CLI package dependency
 /*
 let packageCLIGit = Package.Dependency.package(
-    name: "SringCatalogEnum", // <- Not sure why this is needed, help?
+    name: "StringCatalogEnum", // <- Not sure why this is needed, help?
     url: "https://github.com/superarts/swift-cli-core", 
     .revision("70d7df4e862be86799e9d514e5e55ca92585e7f8")
 )
 let packageCLILocal = Package.Dependency.package(
-    name: "SringCatalogEnum", // <- Not sure why this is needed, help?
+    name: "StringCatalogEnum", // <- Not sure why this is needed, help?
     path: "../../"
 )
 let packageCLI = packageCLILocal
@@ -19,12 +19,12 @@ let packageCLI = packageCLILocal
 */
 
 let package = Package(
-    name: "SringCatalogEnum",
+    name: "StringCatalogEnum",
     platforms: [
         .macOS(.v10_12),
     ],
     products: [
-        .executable(name: "xcstrings-enum-generate", targets: ["SringCatalogEnum"])
+        .executable(name: "xcstrings-enum-generate", targets: ["StringCatalogEnum"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -47,7 +47,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "SringCatalogEnum",
+            name: "StringCatalogEnum",
             dependencies: [
                 .product(
                     name: "ArgumentParser",
@@ -62,8 +62,8 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "SringCatalogEnumTests",
-            dependencies: ["SringCatalogEnum", "Quick", "Nimble"]
+            name: "StringCatalogEnumTests",
+            dependencies: ["StringCatalogEnum", "Quick", "Nimble"]
         ),
     ]
 )

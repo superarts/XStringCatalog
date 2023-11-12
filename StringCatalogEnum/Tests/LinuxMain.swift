@@ -1,7 +1,7 @@
 import XCTest
 
-import SringCatalogEnumTests
+import StringCatalogEnumTests
 
 var tests = [XCTestCaseEntry]()
-tests += SringCatalogEnumTests.allTests()
+tests += StringCatalogEnumTests.allTests()
 XCTMain(tests)
