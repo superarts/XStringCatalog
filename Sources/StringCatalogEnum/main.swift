@@ -4,7 +4,7 @@ import XCTest
 
 // MARK: - Helper Class
 
-class StringCatalogGenerator {
+struct StringCatalogEnum: ParsableCommand {
 
     struct Error: Swift.Error {
         case unexpectedJSON(message: String? = nil)
@@ -14,24 +14,13 @@ class StringCatalogGenerator {
         case `continue`, `default`
     }
 
-    static func generateEnum(from xcstringsPath: String, outputFilename: String, enumName: String = "XcodeStringKey", enumTypealias: String = "XCS") throws {
-        let generator = StringCatalogGenerator(xcstringsPath: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
-        try generator.generateEnum()
-    }
-
     private let xcstringsPath: String
     private let outputFilename: String
     private let enumName: String
     private let enumTypealias: String
 
-    private init(xcstringsPath: String, outputFilename: String, enumName: String, enumTypealias: String) {
-        self.xcstringsPath = xcstringsPath
-        self.outputFilename = outputFilename
-        self.enumName = enumName
-        self.enumTypealias = enumTypealias
-    }
 
-    private func generateEnum() throws {
+     func run() throws {
         print("LOADING: \(xcstringsPath)")
         let url = URL(fileURLWithPath: xcstringsPath)
         let data = try Data(contentsOf: url)
@@ -95,23 +84,42 @@ class StringCatalogGenerator {
     }
 
     private func convertToVariableName(key: String) -> String? {
-        // ... (unchanged)
-    }
-    
-    struct StringCatalogEnum: ParsableCommand {
-        // ... (unchanged)
+        // Leave only letters and numeric characters
+        var result = key.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
 
-        func run() throws {
-           StringCatalogGenerator.generateEnum(from: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
+        // Remove leading numeric characters
+        while !result.isEmpty {
+            let firstLetter = result.prefix(1)
+            let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+            if CharacterSet(charactersIn: String(firstLetter)).isSubset(of: digitsCharacters) {
+                // print("dropping first of: \(result)")
+                result = String(result.dropFirst())
+            } else {
+                break
+            }
         }
 
-        // ... (unchanged)
+        // Return nil if empty
+        guard !result.isEmpty else {
+            return nil
+        }
+
+        // Return lowercased string if there's only 1 character
+        guard result.count > 1 else {
+            return result.lowercased()
+        }
+
+        // Change the first character to lowercase
+        let firstLetter = result.prefix(1).lowercased()
+        let remainingLetters = result.dropFirst()
+        result = firstLetter + remainingLetters
+
+        // TODO: uppercase remaining words, e.g. "an example" to "anExample"; currently it's "anexample"
+        // TODO: lowercase capitalized words, e.g. "EXAMPLE" to "example"; currently it's "eXAMPLE"
+
+        return result
     }
 }
-
-// MARK: - Command Line Interface
-
-
 
 // MARK: - Run Command
 
