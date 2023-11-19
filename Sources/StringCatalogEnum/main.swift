@@ -105,7 +105,7 @@ struct StringCatalogEnum: ParsableCommand {
     // ... (unchanged)
 
     func run() throws {
-        try StringCatalogGenerator.generateEnum(from: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
+       StringCatalogGenerator.generateEnum(from: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
     }
 
     // ... (unchanged)
