@@ -97,19 +97,21 @@ class StringCatalogGenerator {
     private func convertToVariableName(key: String) -> String? {
         // ... (unchanged)
     }
+    
+    struct StringCatalogEnum: ParsableCommand {
+        // ... (unchanged)
+
+        func run() throws {
+           StringCatalogGenerator.generateEnum(from: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
+        }
+
+        // ... (unchanged)
+    }
 }
 
 // MARK: - Command Line Interface
 
-struct StringCatalogEnum: ParsableCommand {
-    // ... (unchanged)
 
-    func run() throws {
-       StringCatalogGenerator.generateEnum(from: xcstringsPath, outputFilename: outputFilename, enumName: enumName, enumTypealias: enumTypealias)
-    }
-
-    // ... (unchanged)
-}
 
 // MARK: - Run Command
 
