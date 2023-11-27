@@ -25,3 +25,8 @@ test:
 
 clean:
 	rm -rf $(NAME)
+
+doc:
+	./$(NAME) --help > USAGE.md
+
+publish: release doc
