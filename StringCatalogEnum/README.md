@@ -21,7 +21,7 @@ You should notice that a lot of things are missing in this utility; for example,
 
 ## How to use
 
-- Download from [Releases](../../../releses).
+- Download from [Releases](../../../releases).
 - Follow [USAGE](USAGE.md) for more details.
 
 ## Example

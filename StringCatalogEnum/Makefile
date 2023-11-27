@@ -1,4 +1,5 @@
 NAME=xcstrings-enum-generate
+FILENAME_USAGE=USAGE.md
 
 # TODO: get from ENV
 EXPORT_PROJECT_ROOT=~/prj/business/quible/quible-ios
@@ -27,6 +28,10 @@ clean:
 	rm -rf $(NAME)
 
 doc:
-	./$(NAME) --help > USAGE.md
+	echo "# USAGE" > $(FILENAME_USAGE)
+	echo >> $(FILENAME_USAGE)
+	echo '``console' >> $(FILENAME_USAGE)
+	./$(NAME) --help >> $(FILENAME_USAGE)
+	echo '``' >> $(FILENAME_USAGE)
 
 publish: release doc
