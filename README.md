@@ -31,7 +31,8 @@ If you are not familiar with [Apple's String Catalog](https://developer.apple.co
   - It can be constructed manually, all you need is to use a `LocalizedStringKey` in `SwiftUI.View`, not the String itself.
     - Helper function: `var key: LocalizedStringKey { LocalizedStringKey(rawValue) }`
   - OR use the [StringCatalogEnum](./StringCatalogEnum) CLI tool in this repo.
-    - Copy `xcstrings-enum-generate` to your project.
+    - Download from [releases](./releases), and copy `xcstrings-enum-generate` to your project.
+    - OR build from source: `cd StringCatalogEnum && make release`
     - Added something like `xcstrings-enum-generate --xcstrings-path ../Resources/Localizable.xcstrings --output-filename ../Generated/XcodeString.swift` to generate the `enum`.
   - OR use [SwiftGen](https://github.com/SwiftGen/SwiftGen/issues/1065) - hopefully better support will be added in future.
   - OR explore how to achieve it with [Sourcery](https://github.com/krzysztofzablocki/Sourcery).
