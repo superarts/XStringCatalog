@@ -126,7 +126,7 @@ struct StringCatalogEnum: ParsableCommand {
                 /// Usage: `SwiftUI.Text(\(enumTypealias).yourStringCatalogKey.key)`
                 var key: LocalizedStringKey { LocalizedStringKey(rawValue) }
 
-                // var text: String { String(localized: key) }
+                var string: String { NSLocalizedString(self.rawValue, comment: "Generated localization from String Catalog key: \\(key)") }
 
                 // var text: String.LocalizationValue { String.LocalizationValue(rawValue) }
             }
