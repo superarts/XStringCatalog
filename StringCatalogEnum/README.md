@@ -17,11 +17,11 @@ This utility converts an `xcstrings` file into a Swift `Enum`.
 
 Although it may not be the best metaprogramming utility, it provides an easy to use way to generates native Swift code from String Catalog files.
 
-You should notice that a lot of things are missing in this utility; for example, minimum documentation has been provided. Some of them are listed in the [issues](../../../issues) section. This is due to another purpose of this utility: to evaluate skills of new developers. You are welcome to learn from [mistakes made by previous contributors](../../../pulls?q=is%3Apr+is%3Aclosed+review%3Achanges_requested).
+You should notice that a lot of things are missing in this utility; for example, minimum documentation has been provided. Some of them are listed in the [issues](../issues) section. This is due to another purpose of this utility: to evaluate skills of new developers. You are welcome to learn from [mistakes made by previous contributors](../pulls?q=is%3Apr+is%3Aclosed+review%3Achanges_requested).
 
 ## How to use
 
-- Download from [Releases](../../../releses).
+- Download from [Releases](../releses).
 - Follow [USAGE](USAGE.md) for more details.
 
 ## Example
