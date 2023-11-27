@@ -1,6 +1,7 @@
 # USAGE
 
 ``console
+
 USAGE: string-catalog-enum --xcstrings-path <xcstrings-path> --output-filename <output-filename> [--enum-name <enum-name>] [--enum-typealias <enum-typealias>]
 
 OPTIONS:
