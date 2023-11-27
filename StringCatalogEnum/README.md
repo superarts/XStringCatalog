@@ -1,4 +1,4 @@
-StringCatalogEnum
+# StringCatalogEnum
 
 This utility converts an `xcstrings` file into a Swift `Enum`.
 
