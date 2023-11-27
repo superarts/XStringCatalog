@@ -30,8 +30,8 @@ clean:
 doc:
 	echo "# USAGE" > $(FILENAME_USAGE)
 	echo >> $(FILENAME_USAGE)
-	echo '``console' >> $(FILENAME_USAGE)
+	echo '```console' >> $(FILENAME_USAGE)
 	./$(NAME) --help >> $(FILENAME_USAGE)
-	echo '``' >> $(FILENAME_USAGE)
+	echo '```' >> $(FILENAME_USAGE)
 
 publish: release doc
