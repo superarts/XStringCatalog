@@ -10,7 +10,7 @@ struct XCStrings: Decodable {
 
 import Foundation
 
-struct StringKeyModel {
+class stringEnumKeyModel {
     
     /// Creates enum cases depending on whether key == name
     ///   - Parameters:
@@ -70,7 +70,7 @@ struct StringKeyModel {
    
     
     /// Convert a Strint Catalog key to a Swift variable name.
-    func convertToVariableName(key: String) -> String? {
+    private func convertToVariableName(key: String) -> String? {
         // Leave only letters and numeric characters
         var result = key.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
 

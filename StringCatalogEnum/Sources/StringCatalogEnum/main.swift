@@ -29,7 +29,7 @@ struct StringCatalogEnum: ParsableCommand {
     var enumTypealias: String = "XCS"
 
     func run() throws {
-        let model = StringKeyModel()
+        let model = stringEnumKeyModel()
         print("Model: ", model.self)
         print("LOADING: \(xcstringsPath)")
         let url = URL(fileURLWithPath: xcstringsPath)
@@ -88,6 +88,43 @@ struct StringCatalogEnum: ParsableCommand {
     
     func getKeywordRawValues() -> [String] {
         return Keyword.allCases.map { $0.rawValue }
+    }
+    /// Convert a Strint Catalog key to a Swift variable name.
+    func convertToVariableName(key: String) -> String? {
+        // Leave only letters and numeric characters
+        var result = key.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
+
+        // Remove leading numeric characters
+        while !result.isEmpty {
+            let firstLetter = result.prefix(1)
+            let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+            if CharacterSet(charactersIn: String(firstLetter)).isSubset(of: digitsCharacters) {
+                // print("dropping first of: \(result)")
+                result = String(result.dropFirst())
+            } else {
+                break
+            }
+        }
+
+        // Return nil if empty
+        guard !result.isEmpty else {
+            return nil
+        }
+
+        // Return lowercased string if there's only 1 character
+        guard result.count > 1 else {
+            return result.lowercased()
+        }
+
+        // Change the first character to lowercase
+        let firstLetter = result.prefix(1).lowercased()
+        let remainingLetters = result.dropFirst()
+        result = firstLetter + remainingLetters
+
+        // TODO: uppercase remaining words, e.g. "an example" to "anExample"; currently it's "anexample"
+        // TODO: lowercase capitalized words, e.g. "EXAMPLE" to "example"; currently it's "eXAMPLE"
+
+        return result
     }
 
 }
