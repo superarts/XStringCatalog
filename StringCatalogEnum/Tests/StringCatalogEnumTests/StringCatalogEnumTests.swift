@@ -1,6 +1,7 @@
 import Nimble
 import Quick
-@testable import xcstrings_enum_generate
+@testable import StringCatalogEnum
+
 
 final class StringCatalogEnumSpec: QuickSpec {
     override class func spec() {
@@ -17,7 +18,7 @@ final class StringCatalogEnumSpec: QuickSpec {
 /// Tests the convertToVariableName() function in StringKeyModel
 final class StringKeyModelSpec: QuickSpec {
     override class func spec() {
-        let stringKeyModel = stringEnumKeyModel()
+        let stringKeyModel = StringEnumKeyModel()
         context("StringKeyModel") {
             describe("Convert To Variable Name Function") {
                 

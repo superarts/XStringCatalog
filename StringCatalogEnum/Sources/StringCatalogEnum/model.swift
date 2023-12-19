@@ -10,7 +10,8 @@ struct XCStrings: Decodable {
 
 import Foundation
 
-class stringEnumKeyModel {
+/// Model that helps separate the logic used in StringCatalogEnum struct.
+struct StringEnumKeyModel {
     
     /// Creates enum cases depending on whether key == name
     ///   - Parameters:
@@ -70,9 +71,21 @@ class stringEnumKeyModel {
    
     
     /// Convert a Strint Catalog key to a Swift variable name.
-    private func convertToVariableName(key: String) -> String? {
+    func convertToVariableName(key: String) -> String? {
+        var result = key
+        // Check if the entire string is uppercase
+        if key == key.uppercased() {
+            result = key.lowercased()
+        }
+
+        
+        // Uppercase remaining words, e.g. "an example" to "anExample";
+        result = result.split(separator: " ").enumerated().map { (index, substring) in
+                index == 0 ? String(substring.prefix(1)).lowercased() + substring.dropFirst() : String(substring).capitalized
+            }.joined()
+        
         // Leave only letters and numeric characters
-        var result = key.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
+        result = result.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
 
         // Remove leading numeric characters
         while !result.isEmpty {
@@ -100,9 +113,6 @@ class stringEnumKeyModel {
         let firstLetter = result.prefix(1).lowercased()
         let remainingLetters = result.dropFirst()
         result = firstLetter + remainingLetters
-
-        // TODO: uppercase remaining words, e.g. "an example" to "anExample"; currently it's "anexample"
-        // TODO: lowercase capitalized words, e.g. "EXAMPLE" to "example"; currently it's "eXAMPLE"
 
         return result
     }
