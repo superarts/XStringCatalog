@@ -7,3 +7,20 @@ struct XCStrings: Decodable {
     let strings: [String: String]
 }
 */
+struct XCStrings: Decodable {
+    let strings: [String: StringInfo]
+}
+
+struct StringInfo: Decodable {
+    let extractionState: String?
+    let localizations: [String: Localization]
+}
+
+struct Localization: Decodable {
+    let stringUnit: StringUnit
+}
+
+struct StringUnit: Decodable {
+    let state: String
+    let value: String
+}
