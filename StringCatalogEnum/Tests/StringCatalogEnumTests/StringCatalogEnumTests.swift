@@ -1,6 +1,5 @@
 import Nimble
 import Quick
-@testable import StringCatalogEnum
 
 
 final class StringCatalogEnumSpec: QuickSpec {
@@ -18,7 +17,7 @@ final class StringCatalogEnumSpec: QuickSpec {
 /// Tests the convertToVariableName() function in StringKeyModel
 final class StringKeyModelSpec: QuickSpec {
     override class func spec() {
-        let stringEnumHelper = StringEnumHelper()
+        let stringEnumHelper = StringCatalogEnum.StringEnumHelper()
 
         context("StringKeyModel") {
             describe("Convert To Variable Name Function") {
@@ -32,7 +31,7 @@ final class StringKeyModelSpec: QuickSpec {
 
                     // Test cases with mixed case
                     expect(stringEnumHelper.convertToVariableName(key: "MixedCaseKey")).to(equal("mixedCaseKey"))
-                    
+
                     // Empty Key Case
                     expect(stringEnumHelper.convertToVariableName(key: "")).to(beNil())
                 }

@@ -30,7 +30,6 @@ struct StringCatalogEnum: ParsableCommand {
 
     func run() throws {
         let helper = StringEnumHelper()
-        print("Model: ", model.self)
         print("LOADING: \(xcstringsPath)")
         let url = URL(fileURLWithPath: xcstringsPath)
         let data = try Data(contentsOf: url)
