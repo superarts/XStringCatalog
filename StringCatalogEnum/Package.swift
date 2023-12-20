@@ -21,7 +21,7 @@ let packageCLI = packageCLILocal
 let package = Package(
     name: "StringCatalogEnum",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v10_12),
     ],
     products: [
         .executable(name: "xcstrings-enum-generate", targets: ["StringCatalogEnum"])

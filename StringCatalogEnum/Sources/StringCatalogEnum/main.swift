@@ -29,7 +29,7 @@ struct StringCatalogEnum: ParsableCommand {
     var enumTypealias: String = "XCS"
 
     func run() throws {
-        let model = StringEnumKeyModel()
+        let helper = StringEnumHelper()
         print("Model: ", model.self)
         print("LOADING: \(xcstringsPath)")
         let url = URL(fileURLWithPath: xcstringsPath)
@@ -59,8 +59,8 @@ struct StringCatalogEnum: ParsableCommand {
 
             """
         let keywordRawValues = getKeywordRawValues()
-        let firstCases = model.createEnumKeys(with: strings, keyNameMatches: true, keywordEnum: keywordRawValues)
-        let secondCases = model.createEnumKeys(with: strings, keyNameMatches: false, keywordEnum: keywordRawValues)
+        let firstCases = helper.createEnumKeys(with: strings, keyNameMatches: true, keywordEnum: keywordRawValues)
+        let secondCases = helper.createEnumKeys(with: strings, keyNameMatches: false, keywordEnum: keywordRawValues)
 
         output += """
                     

@@ -11,7 +11,7 @@ struct XCStrings: Decodable {
 import Foundation
 
 /// Model that helps separate the logic used in StringCatalogEnum struct.
-struct StringEnumKeyModel {
+struct StringEnumHelper {
     
     /// Creates enum cases depending on whether key == name
     ///   - Parameters:
@@ -44,7 +44,7 @@ struct StringEnumKeyModel {
                 continue
             }
             knownCases.append(name)
-
+            
             // TODO: extract `localizations.en.stringUnit.value` and add in comments as inline documents
 
             let caseString: String
