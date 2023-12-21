@@ -1,5 +1,7 @@
+import StringCatalogEnumLibrary
 import ArgumentParser
 import Foundation
+
 
 struct StringCatalogEnum: ParsableCommand {
     enum Error: Swift.Error {

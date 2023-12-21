@@ -24,7 +24,8 @@ let package = Package(
         .macOS(.v10_12),
     ],
     products: [
-        .executable(name: "xcstrings-enum-generate", targets: ["StringCatalogEnum"])
+        .executable(name: "xcstrings-enum-generate", targets: ["StringCatalogEnum"]),
+        .library(name:"StringCatalogEnumLibrary", targets: ["StringCatalogEnumLibrary"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -49,6 +50,7 @@ let package = Package(
         .target(
             name: "StringCatalogEnum",
             dependencies: [
+                "StringCatalogEnumLibrary", 
                 .product(
                     name: "ArgumentParser",
                     package: "swift-argument-parser"
@@ -61,9 +63,15 @@ let package = Package(
                 */
             ]
         ),
+        .target(
+            name: "StringCatalogEnumLibrary",
+            dependencies: [
+                //
+            ]
+        ),
         .testTarget(
             name: "StringCatalogEnumTests",
-            dependencies: ["StringCatalogEnum", "Quick", "Nimble"]
+            dependencies: ["StringCatalogEnumLibrary","StringCatalogEnum", "Quick", "Nimble"]
         ),
     ]
 )
