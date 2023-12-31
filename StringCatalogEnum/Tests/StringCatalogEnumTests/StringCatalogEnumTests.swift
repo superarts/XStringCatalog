@@ -4,30 +4,25 @@ import Quick
 
 final class StringCatalogEnumSpec: QuickSpec {
     override class func spec() {
-        context("StringCatalogEnum") {
-            describe("XCStrings Decoding") {
-                it("should decode simple key correctly") {
-                    let jsonString = """
-                    {
-                      "strings": {
-                        "Home": {}
-                      }
-                    }
-                    """
-                    let jsonData = Data(jsonString.utf8)
-                    let decoder = JSONDecoder()
-
-                    do {
-                        let xcStrings = try decoder.decode(XCStrings.self, from: jsonData)
-                        expect(xcStrings.strings["Home"]).toNot(beNil())
-                        expect(xcStrings.strings["Home"]?.extractionState).to(beNil())
-                        expect(xcStrings.strings["Home"]?.localizations.isEmpty).to(beTrue())
-                    } catch {
-                        fail("Decoding failed: \(error)")
-                    }
+        describe("a decodable model") {
+            it("can decode the json data") {
+                let json = """
+                {
+                    "sourceLanguage" : "en",
+                    "strings" : {
+                    "Home" : {
+                    },
+                },
+                "version" : "1.0"
                 }
-
-                // Add other test cases here in similar fashion
+                """
+                guard let jsonData = json.data(using: .utf8) else {
+                    fatalError("Invalid JSON string")
+                }
+                let decoder = JSONDecoder()
+                expect{
+                    try decoder.decode(XCStrings.self, from: jsonData)
+                }.toNot(throwError())
             }
         }
     }

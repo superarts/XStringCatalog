@@ -1,10 +1,3 @@
-
-struct XCStrings: Decodable {
-    let sourceLanguage: String
-    let version: String
-    let strings: [String: StringInfo]
-}
-
 struct StringInfo: Decodable {
     let extractionState: String?
     let localizations: [String: Localization]?

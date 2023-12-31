@@ -40,7 +40,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/Quick/Nimble.git", 
-            .upToNextMinor(from: "13.0.0")
+            .upToNextMinor(from: "12.0.0")
         ),
     ],
     targets: [
