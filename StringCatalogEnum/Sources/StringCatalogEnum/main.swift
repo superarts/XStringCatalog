@@ -63,19 +63,16 @@ struct StringCatalogEnum: ParsableCommand {
         let secondCases = helper.createEnumKeys(with: strings, keyNameMatches: false, keywordEnum: keywordRawValues)
 
         output += """
-
         \(firstCases)
-
-        // MARK: - The following cases should be manually replaced in your codebase.
+            // MARK: - The following cases should be manually replaced in your codebase.
 
         \(secondCases)
+            /// Usage: `SwiftUI.Text(\(enumTypealias).yourStringCatalogKey.key)`
+            var key: LocalizedStringKey { LocalizedStringKey(rawValue) }
 
-        /// Usage: `SwiftUI.Text(\(enumTypealias).yourStringCatalogKey.key)`
-        var key: LocalizedStringKey { LocalizedStringKey(rawValue) }
+            var string: String { NSLocalizedString(self.rawValue, comment: "Generated localization from String Catalog key: \\(key)") }
 
-        var string: String { NSLocalizedString(self.rawValue, comment: "Generated localization from String Catalog key: \\(key)") }
-
-        // var text: String.LocalizationValue { String.LocalizationValue(rawValue) }
+            // var text: String.LocalizationValue { String.LocalizationValue(rawValue) }
         }
         // swiftlint:enable all
         """
