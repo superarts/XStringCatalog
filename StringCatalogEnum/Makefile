@@ -2,7 +2,7 @@ NAME=xcstrings-enum-generate
 FILENAME_USAGE=USAGE.md
 
 # TODO: get from ENV
-EXPORT_PROJECT_ROOT=~/prj/business/quible/quible-ios
+EXPORT_PROJECT_ROOT=~/prj/quible/quible-ios
 # TODO: remove other hard-coded paths
 
 all: debug
