@@ -3,11 +3,8 @@ import Foundation
 
 /// Model that helps separate the logic used in StringCatalogEnum struct.
 public struct StringEnumHelper {
-    
-    public init() {
-        
-    }
-    
+    public init() {}
+
     /// Creates enum cases depending on whether key == name
     ///   - Parameters:
     ///     - stringData: A dictionary containing string data.
@@ -18,12 +15,11 @@ public struct StringEnumHelper {
         var cases = [String]()
         var knownCases = [String]()
         for (key, _) in stringData {
-            
             guard let name = convertToVariableName(key: key) else {
                 print("SKIPPING: \(key)")
                 continue
             }
-            
+
             if keyNameMatches {
                 guard key == name else {
                     continue
@@ -33,22 +29,21 @@ public struct StringEnumHelper {
                     continue
                 }
             }
-            
+
             guard !knownCases.contains(name) else {
                 cases.append("    // TODO: fix duplicated entry - case \(name)\n")
                 continue
             }
             knownCases.append(name)
-            
+
             // TODO: extract `localizations.en.stringUnit.value` and add in comments as inline documents
 
-            let caseString: String
-            if keywordEnum.contains(name) {
-                caseString = keyNameMatches
+            let caseString: String = if keywordEnum.contains(name) {
+                keyNameMatches
                     ? "    case `\(name)`\n"
                     : "    case `\(name)` = \"\(key.replacingOccurrences(of: "\n", with: ""))\"\n"
             } else {
-                caseString = keyNameMatches
+                keyNameMatches
                     ? "    case \(name)\n"
                     : "    case \(name) = \"\(key.replacingOccurrences(of: "\n", with: ""))\"\n"
             }
@@ -63,8 +58,6 @@ public struct StringEnumHelper {
         return partialOutput
     }
 
-   
-    
     /// Convert a Strint Catalog key to a Swift variable name.
     public func convertToVariableName(key: String) -> String? {
         var result = key
@@ -73,12 +66,11 @@ public struct StringEnumHelper {
             result = key.lowercased()
         }
 
-        
         // Uppercase remaining words, e.g. "an example" to "anExample";
-        result = result.split(separator: " ").enumerated().map { (index, substring) in
-                index == 0 ? String(substring.prefix(1)).lowercased() + substring.dropFirst() : String(substring).capitalized
-            }.joined()
-        
+        result = result.split(separator: " ").enumerated().map { index, substring in
+            index == 0 ? String(substring.prefix(1)).lowercased() + substring.dropFirst() : String(substring).capitalized
+        }.joined()
+
         // Leave only letters and numeric characters
         result = result.components(separatedBy: CharacterSet.letters.union(CharacterSet.alphanumerics).inverted).joined()
 

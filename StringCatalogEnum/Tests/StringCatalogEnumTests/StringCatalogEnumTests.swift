@@ -2,7 +2,6 @@ import Nimble
 import Quick
 import StringCatalogEnumLibrary
 
-
 final class StringCatalogEnumSpec: QuickSpec {
     override class func spec() {
         context("StringCatalogEnum") {
@@ -22,7 +21,7 @@ final class StringKeyModelSpec: QuickSpec {
 
         context("StringKeyModel") {
             describe("Convert To Variable Name Function") {
-                it("Basic cases should convert properly"){
+                it("Basic cases should convert properly") {
                     // Basic test cases
                     expect(stringEnumHelper.convertToVariableName(key: "SomeKey")).to(equal("someKey"))
                     expect(stringEnumHelper.convertToVariableName(key: "123Key")).to(equal("key"))
