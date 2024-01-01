@@ -69,10 +69,6 @@ let package = Package(
                 //
             ]
         ),
-        .target(
-            name: "StringCatalogEnumLibrary",
-            dependencies: []
-        ),
         .testTarget(
             name: "StringCatalogEnumTests",
             dependencies: ["StringCatalogEnumLibrary", "StringCatalogEnum", "Quick", "Nimble"]
