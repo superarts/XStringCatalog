@@ -43,6 +43,14 @@ let package = Package(
             url: "https://github.com/Quick/Nimble.git",
             .upToNextMinor(from: "13.0.0")
         ),
+        .package(
+            url: "https://github.com/realm/SwiftLint",
+            .upToNextMajor(from: "0.54.0")
+              ),
+        .package(
+            url: "https://github.com/nicklockwood/SwiftFormat",
+            .upToNextMajor(from: "0.52.11")
+              ),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
