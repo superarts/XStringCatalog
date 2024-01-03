@@ -4,6 +4,6 @@
  struct XCStrings: Decodable {
      let sourceLanguage: String
      let version: String
-     let strings: [Strsing: String]
+     let strings: [String: String]
  }
  */

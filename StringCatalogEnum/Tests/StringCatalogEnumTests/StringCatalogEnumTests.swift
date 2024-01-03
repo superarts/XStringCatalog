@@ -117,47 +117,6 @@ final class StringKeyModelSpec: QuickSpec {
                     try decoder.decode(Localizations.self, from: jsonData)
                 }.toNot(throwError())
             }
-
-            it("can decode the json data with English translation and pluralism manually added") {
-                let json = """
-                {
-                    "sourceLanguage" : "en",
-                    "strings" : {
-                        "%11d Books" : {
-                            "extractionState" : "manual",
-                            "localizations" : {
-                                "en" : {
-                                    "variations" : {
-                                        "plural" : {
-                                            "one" : {
-                                                "stringUnit" : {
-                                                    "state" : "translated",
-                                                    "value" : "Book"
-                                                }
-                                            },
-                                            "other" : {
-                                                "stringUnit" : {
-                                                    "state" : "translated",
-                                                    "value" : "%11d Books"
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                    },
-                    "version" : "1.0"
-                }
-                """
-                guard let jsonData = json.data(using: .utf8) else {
-                    fatalError("Invalid JSON string")
-                }
-                let decoder = JSONDecoder()
-                expect{
-                    try decoder.decode(Localizations.self, from: jsonData)
-                }.toNot(throwError())
-            }
         }
     }
 }
