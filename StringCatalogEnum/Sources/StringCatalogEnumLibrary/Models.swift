@@ -1,3 +1,48 @@
+/// Represents the root structure of the xcstrings JSON.
+/// This struct is designed to handle various JSON formats, including those
+/// generated from SwiftUI and manually added translations.
+/// 
+/// Examples of supported JSON formats:
+///
+/// 1. Generated from SwiftUI (no translation added):
+/// ```
+/// "Home": {}
+/// ```
+///
+/// 2. Generated from SwiftUI, with an English translation:
+/// ```
+/// "Login": {
+///   "localizations": {
+///     "en": {
+///       "stringUnit": {
+///         "state": "translated",
+///         "value": "Login"
+///       }
+///     }
+///   }
+/// }
+/// ```
+///
+/// 3. Manually added, English only:
+/// ```
+/// "welcomeBack": {
+///   "extractionState": "manual",
+///   "localizations": {
+///     "en": {
+///       "stringUnit": {
+///         "state": "translated",
+///         "value": "Welcome back"
+///       }
+///     }
+///   }
+/// }
+/// ```
+public struct Localizations: Decodable {
+    let sourceLanguage: String
+    let version: String
+    let strings: [String: StringInfo]
+}
+
 struct StringInfo: Decodable {
     public let extractionState: String?
     public let localizations: [String: Localization]?
