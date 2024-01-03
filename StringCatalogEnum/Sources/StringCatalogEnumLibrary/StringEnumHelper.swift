@@ -38,14 +38,22 @@ public struct StringEnumHelper {
             knownCases.append(name)
 
             // TODO: extract `localizations.en.stringUnit.value` and add in comments as inline documents
-            // Extract the English localization value
-            let englishValue: String
-            if let localization = data.localizations?["en"], let stringUnit = localization.stringUnit {
-                englishValue = stringUnit.value.replacingOccurrences(of: "\n", with: " ")
-            } else {
-                englishValue = "No value"
+            // Extract localization values and format them for comments
+            var localizationComments = [String]()
+            if let localizations = data.localizations {
+                for (languageCode, localization) in localizations {
+                    if let stringUnit = localization.stringUnit {
+                        let value = stringUnit.value.replacingOccurrences(of: "\n", with: " ")
+                        localizationComments.append("    /// \(languageCode): \(value)")
+                    }
+                }
             }
-            let comment = "    /// \(englishValue)\n"
+
+            if localizationComments.isEmpty {
+                localizationComments.append("    /// No localizations available")
+            }
+
+            let comment = localizationComments.joined(separator: "\n")
 
             let caseString: String = if keywordEnum.contains(name) {
                 keyNameMatches
