@@ -116,6 +116,24 @@ final class StringKeyModelSpec: QuickSpec {
                 expect{
                     try decoder.decode(Localizations.self, from: jsonData)
                 }.toNot(throwError())
+
+                // To complete this test, we should change all the structs and their attributes to be public
+                // Verify the decoded data
+                if let decodedData = try? decoder.decode(Localizations.self, from: jsonData) {
+                    // Verify sourceLanguage
+                    expect(decodedData.sourceLanguage).to(equal("en"))
+
+                    // Verify version
+                    expect(decodedData.version).to(equal("1.0"))
+
+                    // Verify the contents of 'strings' dictionary
+                    expect(decodedData.strings["welcomeBack"]).toNot(beNil())
+                    expect(decodedData.strings["welcomeBack"]?.extractionState).to(equal("manual"))
+                    expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.state).to(equal("translated"))
+                    expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.value).to(equal("Welcome back"))
+                } else {
+                    fail("JSON data could not be decoded")
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 struct StringInfo: Decodable {
-    let extractionState: String?
-    let localizations: [String: Localization]?
+    public let extractionState: String?
+    public let localizations: [String: Localization]?
 }
 
 struct Localization: Decodable {
