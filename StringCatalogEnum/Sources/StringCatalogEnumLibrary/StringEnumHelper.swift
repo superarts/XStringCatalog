@@ -66,7 +66,7 @@ public struct StringEnumHelper {
             }
 
             
-            cases.append(comment + caseString)
+            cases.append("\(comment)\n\(caseString)")
         }
         cases.sort()
         cases.forEach { string in
