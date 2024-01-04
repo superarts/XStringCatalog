@@ -2,4 +2,4 @@
 
 ## Related issue(s)
 
-- #1
+- #ISSUE_NUMBER

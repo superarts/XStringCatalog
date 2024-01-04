@@ -36,14 +36,6 @@ struct StringCatalogEnum: ParsableCommand {
         let data = try Data(contentsOf: url)
         print(data)
 
-        // guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-        //     throw Error.unexpectedJSON(message: "cannot parse first level object")
-        // }
-
-        // guard let strings = json["strings"] as? [String: Any] else {
-        //     throw Error.unexpectedJSON(message: "cannot parse `strings`")
-        // }
-
         let decoder = JSONDecoder()
         let strings = try decoder.decode(Localizations.self, from: data)
 
