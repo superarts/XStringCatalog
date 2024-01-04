@@ -45,9 +45,7 @@ struct StringCatalogEnum: ParsableCommand {
         // }
 
         let decoder = JSONDecoder()
-        guard let strings = try decoder.decode(Localizations.self, from: data) else {
-            throw Error.unexpectedJSON(message: "cannot parse json")
-        }
+        let strings = try decoder.decode(Localizations.self, from: data)
 
 
         var output = """
