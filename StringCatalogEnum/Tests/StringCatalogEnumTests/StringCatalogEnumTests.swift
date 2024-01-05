@@ -59,6 +59,21 @@ final class StringKeyModelSpec: QuickSpec {
                 expect{
                     try decoder.decode(Localizations.self, from: jsonData)
                 }.toNot(throwError())
+
+                // Verify the decoded data
+                if let decodedData = try? decoder.decode(Localizations.self, from: jsonData) {
+                    // Verify the sourceLanguage
+                    expect(decodedData.sourceLanguage).to(equal("en"))
+
+                    // Verify the version
+                    expect(decodedData.version).to(equal("1.0"))
+
+                    // Verify the contents of 'strings' dictionary
+                    // Here we verify it with Not Be Nil because we design the model not to be optional
+                    expect(decodedData.strings["Home"]).toNot(beNil())
+                } else {
+                    fail("Failed to decode Localizations")
+                }
             }
 
             it("can decode the json data with English translation added") {
@@ -87,6 +102,22 @@ final class StringKeyModelSpec: QuickSpec {
                 expect{
                     try decoder.decode(Localizations.self, from: jsonData)
                 }.toNot(throwError())
+
+                // Verify the decoded data
+                if let decodedData = try? decoder.decode(Localizations.self, from: jsonData) {
+                    // Verify the sourceLanguage
+                    expect(decodedData.sourceLanguage).to(equal("en"))
+
+                    // Verify the version
+                    expect(decodedData.version).to(equal("1.0"))
+
+                    // Verify the contents of 'strings' dictionary
+                    expect(decodedData.strings["Login"]).toNot(beNil())
+                    expect(decodedData.strings["Login"]?.localizations?["en"]?.stringUnit?.state).to(equal("translated"))
+                    expect(decodedData.strings["Login"]?.localizations?["en"]?.stringUnit?.value).to(equal("Login"))
+                } else {
+                    fail("Failed to decode Localizations")
+                }
             }
 
             it("can decode the json data with English translation manually added") {
@@ -119,21 +150,21 @@ final class StringKeyModelSpec: QuickSpec {
 
                 // To complete this test, we should change all the structs and their attributes to be public
                 // Verify the decoded data
-                // if let decodedData = try? decoder.decode(Localizations.self, from: jsonData) {
-                //     // Verify sourceLanguage
-                //     expect(decodedData.sourceLanguage).to(equal("en"))
+                if let decodedData = try? decoder.decode(Localizations.self, from: jsonData) {
+                    // Verify sourceLanguage
+                    expect(decodedData.sourceLanguage).to(equal("en"))
 
-                //     // Verify version
-                //     expect(decodedData.version).to(equal("1.0"))
+                    // Verify version
+                    expect(decodedData.version).to(equal("1.0"))
 
-                //     // Verify the contents of 'strings' dictionary
-                //     expect(decodedData.strings["welcomeBack"]).toNot(beNil())
-                //     expect(decodedData.strings["welcomeBack"]?.extractionState).to(equal("manual"))
-                //     expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.state).to(equal("translated"))
-                //     expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.value).to(equal("Welcome back"))
-                // } else {
-                //     fail("JSON data could not be decoded")
-                // }
+                    // Verify the contents of 'strings' dictionary
+                    expect(decodedData.strings["welcomeBack"]).toNot(beNil())
+                    expect(decodedData.strings["welcomeBack"]?.extractionState).to(equal("manual"))
+                    expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.state).to(equal("translated"))
+                    expect(decodedData.strings["welcomeBack"]?.localizations?["en"]?.stringUnit?.value).to(equal("Welcome back"))
+                } else {
+                    fail("JSON data could not be decoded")
+                }
             }
         }
     }

@@ -38,18 +38,18 @@
 /// }
 /// ```
 public struct Localizations: Decodable {
-    let sourceLanguage: String
-    let version: String
-    let strings: [String: StringInfo]
+    public let sourceLanguage: String
+    public let version: String
+    public let strings: [String: StringInfo]
 }
 
-struct StringInfo: Decodable {
+public struct StringInfo: Decodable {
     public let extractionState: String?
     public let localizations: [String: Localization]?
 }
 
-struct Localization: Decodable {
-    let stringUnit: StringUnit?
+public struct Localization: Decodable {
+    public let stringUnit: StringUnit?
     // let variations: Variations?
 }
 
@@ -71,7 +71,7 @@ struct Localization: Decodable {
 //     let stringUnit: StringUnit
 // }
 
-struct StringUnit: Decodable {
-    let state: String
-    let value: String
+public struct StringUnit: Decodable {
+    public let state: String
+    public let value: String
 }
