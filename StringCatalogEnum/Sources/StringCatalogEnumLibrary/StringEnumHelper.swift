@@ -10,11 +10,12 @@ public struct StringEnumHelper {
     ///     - stringData: A dictionary containing string data.
     ///     - keyNameMatches: A boolean flag indicating whether the enum cases should match the keys exactly.
     ///     - keywordEnum: An array of raw values from the Keyword enum in StringCatalogEnum struct
-    public func createEnumKeys(with stringData: [String: Any], keyNameMatches: Bool, keywordEnum: [String]) -> String {
+    public func createEnumKeys(with stringData: Localizations, keyNameMatches: Bool, keywordEnum: [String]) -> String {
         var partialOutput = ""
         var cases = [String]()
         var knownCases = [String]()
-        for (key, _) in stringData {
+
+        for (key, data) in stringData.strings {
             guard let name = convertToVariableName(key: key) else {
                 print("SKIPPING: \(key)")
                 continue
@@ -36,7 +37,22 @@ public struct StringEnumHelper {
             }
             knownCases.append(name)
 
-            // TODO: extract `localizations.en.stringUnit.value` and add in comments as inline documents
+            // Extract localization values and format them for comments
+            var localizationComments = [String]()
+            if let localizations = data.localizations {
+                for (languageCode, localization) in localizations {
+                    if let stringUnit = localization.stringUnit {
+                        let value = stringUnit.value.replacingOccurrences(of: "\n", with: " ")
+                        localizationComments.append("    /// '\(languageCode)': \"\(value)\"")
+                    }
+                }
+            }
+
+            if localizationComments.isEmpty {
+                localizationComments.append("    /// No localizations available")
+            }
+
+            let comment = localizationComments.joined(separator: "\n")
 
             let caseString: String = if keywordEnum.contains(name) {
                 keyNameMatches
@@ -48,7 +64,7 @@ public struct StringEnumHelper {
                     : "    case \(name) = \"\(key.replacingOccurrences(of: "\n", with: ""))\"\n"
             }
 
-            cases.append(caseString)
+            cases.append("\(comment)\n\(caseString)")
         }
         cases.sort()
         cases.forEach { string in
@@ -58,7 +74,7 @@ public struct StringEnumHelper {
         return partialOutput
     }
 
-    /// Convert a Strint Catalog key to a Swift variable name.
+    /// Convert a String Catalog key to a Swift variable name.
     public func convertToVariableName(key: String) -> String? {
         var result = key
         // Check if the entire string is uppercase
