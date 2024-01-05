@@ -64,7 +64,6 @@ public struct StringEnumHelper {
                     : "    case \(name) = \"\(key.replacingOccurrences(of: "\n", with: ""))\"\n"
             }
 
-            
             cases.append("\(comment)\n\(caseString)")
         }
         cases.sort()
