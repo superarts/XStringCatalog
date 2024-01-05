@@ -37,14 +37,13 @@ public struct StringEnumHelper {
             }
             knownCases.append(name)
 
-            // TODO: extract `localizations.en.stringUnit.value` and add in comments as inline documents
             // Extract localization values and format them for comments
             var localizationComments = [String]()
             if let localizations = data.localizations {
                 for (languageCode, localization) in localizations {
                     if let stringUnit = localization.stringUnit {
                         let value = stringUnit.value.replacingOccurrences(of: "\n", with: " ")
-                        localizationComments.append("    /// \(languageCode): \(value)")
+                        localizationComments.append("    /// '\(languageCode)': \"\(value)\"")
                     }
                 }
             }
