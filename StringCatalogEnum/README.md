@@ -40,3 +40,10 @@ It is expected for the new developers to proactively research unfamiliar tech st
 - `Makefile` and `make`.
 
 Hint: always ask questions if you are lost, just make sure you've done your research.
+
+## How to use SwiftLint before pushing
+
+1. Open your terminal
+2. Navigate to StringCatalogEnum
+3. Type "SwiftLint" and hit enter
+4. Done
