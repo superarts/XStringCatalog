@@ -9,6 +9,7 @@ This utility converts an `xcstrings` file into a Swift `Enum`.
 - [Purpose of this utility](#purpose-of-this-utility)
 - [How to use](#how-to-use)
 - [Example](#example)
+- [Unit testing](#unit-testing)
 - [Tech stack](#tech-stack)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -30,6 +31,10 @@ For a string with key `errorMessage` in your String Catalog, you will have a `ca
 
 - `SwiftUI.View(XcodeString.errorMessage.key)`
 - `let string = XcodeString.errorMessage.string`
+
+## Unit testing
+
+Before open your PR for review, make sure all unit tests are passing by running `swift test` or `make test`.
 
 ## Tech stack
 
