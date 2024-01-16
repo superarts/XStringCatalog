@@ -1,0 +1,27 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '**/*.swift'
+      - '**/*.yml'
+
+jobs:
+  test:
+    name: Run Swift Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Setup Swift
+      uses: swift-actions/setup-swift@v1.26.0
+
+    - name: Make script executable
+      run: sh ./test.sh
+
+    - name: Run tests
+      run: sh ./test.sh
+      working-directory: StringCatalogEnum
