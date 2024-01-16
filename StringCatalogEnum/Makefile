@@ -1,8 +1,9 @@
 NAME=xcstrings-enum-generate
 FILENAME_USAGE=USAGE.md
+BUILD_PATH=./.build/apple/Products/Release/
 
 # TODO: get from ENV
-EXPORT_PROJECT_ROOT=~/prj/quible/quible-ios
+EXPORT_PROJECT_ROOT=~/prj/business/quible/quible-ios
 # TODO: remove other hard-coded paths
 
 all: debug
@@ -17,8 +18,8 @@ debug:
 	cp ./.build/debug/$(NAME) .
 
 release: clean
-	swift build -c release
-	cp ./.build/release/$(NAME) .
+	swift build -c release --arch x86_64 --arch arm64
+	cp $(BUILD_PATH)/$(NAME) .
 	cp xcstrings-enum-generate $(EXPORT_PROJECT_ROOT)/utility/
 
 test:
