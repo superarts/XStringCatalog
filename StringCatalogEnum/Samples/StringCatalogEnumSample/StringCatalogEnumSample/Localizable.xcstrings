@@ -1,0 +1,61 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "MultipleItemsMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You are now have %d items."
+          }
+        }
+      }
+    },
+    "SingleItemMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You are now have 1 item."
+          }
+        }
+      }
+    },
+    "TestingKey" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Content is for testing only"
+          }
+        }
+      }
+    },
+    "WelcomeBackKey" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome Back!"
+          }
+        }
+      }
+    },
+    "WelcomeMessageFormat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello, %@! Welcome to our app."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

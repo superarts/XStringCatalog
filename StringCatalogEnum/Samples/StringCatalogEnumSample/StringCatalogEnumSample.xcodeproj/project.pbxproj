@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		516EC65E2BAA39E700D67B9F /* StringCatalogEnumLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 516EC65D2BAA39E700D67B9F /* StringCatalogEnumLibrary */; };
+		516EC6602BAA39E700D67B9F /* xcstrings-enum-generate in Frameworks */ = {isa = PBXBuildFile; productRef = 516EC65F2BAA39E700D67B9F /* xcstrings-enum-generate */; };
+		516EC6642BAA865E00D67B9F /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516EC6632BAA865E00D67B9F /* GeneratedStrings.swift */; };
+		5191458C2BAA2F83005A36C2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5191458B2BAA2F83005A36C2 /* Localizable.xcstrings */; };
+		519A8B652BAA114300839916 /* StringCatalogEnumSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A8B642BAA114300839916 /* StringCatalogEnumSampleApp.swift */; };
+		519A8B672BAA114300839916 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A8B662BAA114300839916 /* ContentView.swift */; };
+		519A8B692BAA114600839916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519A8B682BAA114600839916 /* Assets.xcassets */; };
+		519A8B6C2BAA114600839916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519A8B6B2BAA114600839916 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		516EC6632BAA865E00D67B9F /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
+		5191458B2BAA2F83005A36C2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		519A8B612BAA114300839916 /* StringCatalogEnumSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCatalogEnumSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		519A8B642BAA114300839916 /* StringCatalogEnumSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCatalogEnumSampleApp.swift; sourceTree = "<group>"; };
+		519A8B662BAA114300839916 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		519A8B682BAA114600839916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		519A8B6B2BAA114600839916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		519A8B5E2BAA114300839916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516EC6602BAA39E700D67B9F /* xcstrings-enum-generate in Frameworks */,
+				516EC65E2BAA39E700D67B9F /* StringCatalogEnumLibrary in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		519A8B582BAA114300839916 = {
+			isa = PBXGroup;
+			children = (
+				519A8B632BAA114300839916 /* StringCatalogEnumSample */,
+				519A8B622BAA114300839916 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		519A8B622BAA114300839916 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				519A8B612BAA114300839916 /* StringCatalogEnumSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		519A8B632BAA114300839916 /* StringCatalogEnumSample */ = {
+			isa = PBXGroup;
+			children = (
+				5191458B2BAA2F83005A36C2 /* Localizable.xcstrings */,
+				519A8B642BAA114300839916 /* StringCatalogEnumSampleApp.swift */,
+				519A8B662BAA114300839916 /* ContentView.swift */,
+				516EC6632BAA865E00D67B9F /* GeneratedStrings.swift */,
+				519A8B682BAA114600839916 /* Assets.xcassets */,
+				519A8B6A2BAA114600839916 /* Preview Content */,
+			);
+			path = StringCatalogEnumSample;
+			sourceTree = "<group>";
+		};
+		519A8B6A2BAA114600839916 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				519A8B6B2BAA114600839916 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		519A8B602BAA114300839916 /* StringCatalogEnumSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 519A8B6F2BAA114600839916 /* Build configuration list for PBXNativeTarget "StringCatalogEnumSample" */;
+			buildPhases = (
+				519A8B5D2BAA114300839916 /* Sources */,
+				519A8B5E2BAA114300839916 /* Frameworks */,
+				519A8B5F2BAA114300839916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StringCatalogEnumSample;
+			packageProductDependencies = (
+				516EC65D2BAA39E700D67B9F /* StringCatalogEnumLibrary */,
+				516EC65F2BAA39E700D67B9F /* xcstrings-enum-generate */,
+			);
+			productName = StringCatalogEnumSample;
+			productReference = 519A8B612BAA114300839916 /* StringCatalogEnumSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		519A8B592BAA114300839916 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					519A8B602BAA114300839916 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 519A8B5C2BAA114300839916 /* Build configuration list for PBXProject "StringCatalogEnumSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 519A8B582BAA114300839916;
+			packageReferences = (
+				516EC65C2BAA39E700D67B9F /* XCLocalSwiftPackageReference "../XStringCatalog/StringCatalogEnum" */,
+			);
+			productRefGroup = 519A8B622BAA114300839916 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				519A8B602BAA114300839916 /* StringCatalogEnumSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		519A8B5F2BAA114300839916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519A8B6C2BAA114600839916 /* Preview Assets.xcassets in Resources */,
+				519A8B692BAA114600839916 /* Assets.xcassets in Resources */,
+				5191458C2BAA2F83005A36C2 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		519A8B5D2BAA114300839916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519A8B672BAA114300839916 /* ContentView.swift in Sources */,
+				516EC6642BAA865E00D67B9F /* GeneratedStrings.swift in Sources */,
+				519A8B652BAA114300839916 /* StringCatalogEnumSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		519A8B6D2BAA114600839916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		519A8B6E2BAA114600839916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		519A8B702BAA114600839916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StringCatalogEnumSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 4457JVC2UZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YuxuanLi.StringCatalogEnumSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		519A8B712BAA114600839916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StringCatalogEnumSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 4457JVC2UZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YuxuanLi.StringCatalogEnumSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		519A8B5C2BAA114300839916 /* Build configuration list for PBXProject "StringCatalogEnumSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				519A8B6D2BAA114600839916 /* Debug */,
+				519A8B6E2BAA114600839916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		519A8B6F2BAA114600839916 /* Build configuration list for PBXNativeTarget "StringCatalogEnumSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				519A8B702BAA114600839916 /* Debug */,
+				519A8B712BAA114600839916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		516EC65C2BAA39E700D67B9F /* XCLocalSwiftPackageReference "../XStringCatalog/StringCatalogEnum" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../XStringCatalog/StringCatalogEnum;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		516EC65D2BAA39E700D67B9F /* StringCatalogEnumLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StringCatalogEnumLibrary;
+		};
+		516EC65F2BAA39E700D67B9F /* xcstrings-enum-generate */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "xcstrings-enum-generate";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 519A8B592BAA114300839916 /* Project object */;
+}
