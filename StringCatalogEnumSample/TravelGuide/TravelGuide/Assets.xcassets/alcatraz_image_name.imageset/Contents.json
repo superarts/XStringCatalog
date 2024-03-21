@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Alcatraz_Island_photo_Don_Ramey_Logan.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
