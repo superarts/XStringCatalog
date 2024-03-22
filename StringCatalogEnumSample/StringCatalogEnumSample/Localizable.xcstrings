@@ -1,0 +1,97 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "After a 47-year wait, the Nuggets are NBA champs after a Game 5 win vs. the Heat in which Nikola Jokic claimed Bill Russell NBA Finals MVP honors." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Después de una espera de 47 años, los Nuggets son campeones de la NBA después de una victoria en el Juego 5 contra el Heat en la que Nikola Jokic reclamó los honores de Jugador Más Valioso de las Finales de la NBA Bill Russell."
+          }
+        }
+      }
+    },
+    "bets" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "You have %lld active bet."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "You have %lld active bets."
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Tienes %lld apuestas activa."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Tienes %lld apuestas activas."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Chasing History: Nuggets reach NBA summit (EP: 31)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persiguiendo la historia: los Nuggets alcanzan la cima de la NBA (EP: 31)"
+          }
+        }
+      }
+    },
+    "Trending News for Basketball 🏀" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noticias de actualidad para el baloncesto 🏀"
+          }
+        }
+      }
+    },
+    "welcomeBack" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome Back, %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenido de nuevo, %@"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
