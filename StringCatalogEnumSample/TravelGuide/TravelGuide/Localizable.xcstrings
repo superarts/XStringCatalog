@@ -205,6 +205,17 @@
         }
       }
     },
+    "Get travel destinations" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यात्रा गंतव्य प्राप्त करें"
+          }
+        }
+      }
+    },
     "GoldenGateBridge" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -256,6 +267,17 @@
         }
       }
     },
+    "Travel Destinations" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\nयात्रा स्थल"
+          }
+        }
+      }
+    },
     "TwinPeaks" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -303,6 +325,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "यह सैन फ़्रांसिस्को के कुछ बेहतरीन दृश्य प्रस्तुत करता है, जो शहर का मनोरम दृश्य प्रदान करता है।"
+          }
+        }
+      }
+    },
+    "Welcome to San Francisco" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सैन फ्रांसिस्को में आपका स्वागत है"
           }
         }
       }
