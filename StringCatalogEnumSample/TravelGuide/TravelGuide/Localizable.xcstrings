@@ -1,0 +1,345 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " %lld Attractions:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : " %lld Attraction:"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : " %lld Attractions:"
+                }
+              }
+            }
+          }
+        },
+        "hi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld आकर्षण:"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : " %lld आकर्षण:"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "• %@" : {
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ". %@"
+          }
+        }
+      }
+    },
+    "Alcatraz" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alcatraz"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अलकाट्राज़"
+          }
+        }
+      }
+    },
+    "AlcatrazAttraction1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cellhouse"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेलहाउस"
+          }
+        }
+      }
+    },
+    "AlcatrazAttraction2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alcatraz Island"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अलकाट्राज़ द्वीप"
+          }
+        }
+      }
+    },
+    "AlcatrazDesc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An island offering a glimpse into the prison that once held some of the United States' most notorious criminals."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एक द्वीप जो उस जेल की झलक पेश करता है जिसमें कभी संयुक्त राज्य अमेरिका के कुछ सबसे कुख्यात अपराधियों को रखा जाता था।"
+          }
+        }
+      }
+    },
+    "BigSur" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Big Sur"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बिग सुर"
+          }
+        }
+      }
+    },
+    "BigSurAttraction1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bixby Creek Bridge"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बिक्सबी क्रीक ब्रिज"
+          }
+        }
+      }
+    },
+    "BigSurAttraction2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pfeiffer Beach"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़िफ़र बीच"
+          }
+        }
+      }
+    },
+    "BigSurAttraction3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "McWay Falls"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मैक्वे फॉल्स"
+          }
+        }
+      }
+    },
+    "BigSureDesc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A scenic stretch of California's coast known for its views, parks, and outdoor activities"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कैलिफ़ोर्निया के तट का एक सुंदर विस्तार जो अपने दृश्यों, पार्कों और बाहरी गतिविधियों के लिए जाना जाता है"
+          }
+        }
+      }
+    },
+    "Get travel destinations" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यात्रा गंतव्य प्राप्त करें"
+          }
+        }
+      }
+    },
+    "GoldenGateBridge" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Golden Gate Bridge"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गोल्डन गेट ब्रिज"
+          }
+        }
+      }
+    },
+    "GoldenGateBridgeAttraction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bridge Viewpoints"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ब्रिज व्यूप्वाइंट"
+          }
+        }
+      }
+    },
+    "GoldenGateBridgeDesc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An iconic suspension bridge and one of the most internationally recognized symbols of San Francisco"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एक प्रतिष्ठित सस्पेंशन ब्रिज और सैन फ्रांसिस्को के सबसे अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त प्रतीकों में से एक"
+          }
+        }
+      }
+    },
+    "Travel Destinations" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\nयात्रा स्थल"
+          }
+        }
+      }
+    },
+    "TwinPeaks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twin Peaks"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दो चोटियां"
+          }
+        }
+      }
+    },
+    "TwinPeaksAttraction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twin Peaks Summit"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ट्विन पीक्स समिट"
+          }
+        }
+      }
+    },
+    "TwinPeaksDesc" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offers some of the best views of San Francisco, providing a panoramic lookout over the city."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह सैन फ़्रांसिस्को के कुछ बेहतरीन दृश्य प्रस्तुत करता है, जो शहर का मनोरम दृश्य प्रदान करता है।"
+          }
+        }
+      }
+    },
+    "Welcome to San Francisco" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सैन फ्रांसिस्को में आपका स्वागत है"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
